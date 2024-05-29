@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-image: radial-gradient(rgb(173, 13, 13), white);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  font-weight: 400;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("pexels-tahir-shaw-50609-186980.jpg");
+  background-size: cover;
+  position: absolute;
+  background-position: center;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  /* border: 2px solid maroon; */
+  border-radius: 5px;
+  text-align: center;
+}
+
+.weather p {
+  font-size: 2rem;
+}
+
+.weather span {
+  font-size: 0.75rem;
+}
+
+.weather1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.weather3 img {
+  width: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather > div {
+  margin: 0.625rem 0;
+}
+
+nav {
+  height: 100px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px 100px 0 0;
+  padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+}
+
+nav form {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+
+.search {
+  font-size: 1.1rem;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 1rem 0;
+  border-bottom: 2px solid maroon;
+  width: 98%;
+}
+
+nav form button {
+  background-color: maroon;
+  color: white;
+  border-radius: 0 25px 25px 0;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+  .weather {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .weather1 {
+    font-size: 4rem;
+  }
+
+  .weather p, .weather span {
+    font-size: 1rem;
+  }
+
+  .weather3 img {
+    width: 4rem;
+  }
+
+  nav form {
+    width: 50%;
+  }
+
+  .search {
+    font-size: 1.2rem;
+  }
+
+  nav form button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .weather {
+    padding: 5rem;
+    border-radius: 10px;
+  }
+
+  .weather1 {
+    font-size: 5rem;
+  }
+
+  .weather p, .weather span {
+    font-size: 1.2rem;
+  }
+
+  .weather3 img {
+    width: 5rem;
+  }
+
+  nav form {
+    width: 40%;
+  }
+
+  .search {
+    font-size: 1.4rem;
+  }
+
+  nav form button {
+    font-size: 1.4rem;
+  }
+}
