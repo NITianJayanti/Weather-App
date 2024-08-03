@@ -1,2 +1,2 @@
 # Weather-App
-Jvascript project . All data are taken from weather api
+Javascript project . All data are taken from weather api
